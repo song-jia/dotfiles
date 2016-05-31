@@ -1,0 +1,27 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"Babel",
+		"MarkdownEditing",
+		"Material Theme",
+		"Package Control",
+		"PHP-Twig",
+		"PHPUnit",
+		"Pretty JSON",
+		"React ES6 Snippets",
+		"SCSS",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-php",
+		"SublimeLinter-phpcs",
+		"SublimeLinter-phpmd",
+		"Theme - Spacegray",
+		"Vintageous"
+	]
+}
