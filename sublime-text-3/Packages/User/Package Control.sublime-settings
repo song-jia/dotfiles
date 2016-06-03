@@ -8,7 +8,8 @@
 		"AdvancedNewFile",
 		"All Autocomplete",
 		"Babel",
-		"MarkdownEditing",
+		"EditorConfig",
+		"Markdown Preview",
 		"Material Theme",
 		"Package Control",
 		"PHP-Twig",
@@ -22,6 +23,7 @@
 		"SublimeLinter-phpcs",
 		"SublimeLinter-phpmd",
 		"Theme - Spacegray",
-		"Vintageous"
+		"Vintageous",
+		"Vue Syntax Highlight"
 	]
 }

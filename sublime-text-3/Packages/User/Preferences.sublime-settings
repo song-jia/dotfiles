@@ -4,10 +4,11 @@
 	[
 		".git",
 		"node_modules",
-		"blog"
+		"blog",
+		".idea"
 	],
-	"font_face": "Consolas",
-	"font_size": 11,
+	"font_face": "Source Code Pro Medium",
+	"font_size": 10,
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -17,7 +18,7 @@
 	[
 		"draw_active"
 	],
-	"line_padding_bottom": 5,
+	"line_padding_bottom": 3,
 	"rulers":
 	[
 		120

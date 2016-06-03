@@ -20,14 +20,16 @@
             "phpcs": {
                 "@disable": false,
                 "args": [],
-                "excludes": ["*.html"],
-                "standard": "PSRCCA"
+                "excludes": [
+                    "*.html"
+                ],
+                "standard": "PSR2"
             },
             "phpmd": {
                 "@disable": false,
                 "args": [],
                 "excludes": [],
-                "rulesets": "/home/vagrant/ruleset.xml"
+                "rulesets": "/workspace/www/bride-and-groom-direct/ruleset.xml"
             }
         },
         "mark_style": "outline",
