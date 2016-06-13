@@ -1,0 +1,110 @@
+set nocompatible              " be iMproved, required
+
+source ~/.vim/plugins.vim
+syntax enable
+
+"make backspace behave like every other editor.
+set backspace=indent,eol,start
+"user comma as leader.
+let mapleader = ','
+"active line numbers.
+set nonumber
+set tabstop=4
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+set encoding=utf-8
+" display syntastic error in status line.
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+
+"--------------visuals-----------------------
+colorscheme material-theme
+set background=dark
+set guifont=Source\ Code\ Pro\ Medium\ 10
+"hide left scorll bar
+set guioptions-=l
+set guioptions-=L
+"hide right scroll bar
+set guioptions-=r
+set guioptions-=R
+"hide menu bar
+set guioptions-=m
+"hide tool bar
+set guioptions-=T
+set guioptions-=e
+"set line height
+set linespace=10
+" fake a custom left padding for each window.
+hi lineNr guibg=bg
+set foldcolumn=2
+hi foldcolumn guibg=bg
+" get rid of ugly split borders.
+hi vertsplit guibg=bg
+hi TabLine guifg=gray guibg=bg
+hi TabLineFill guibg=bg guifg=bg
+set colorcolumn=81
+
+"-----------auto-commands------------
+"automatically source the vimrc file on save.
+augroup autosourcing
+	autocmd!
+	autocmd BUfWritePost .vimrc source %
+augroup END
+
+
+"-------------mappings-------------
+"make it easy to edit the vimrc file.
+nmap <leader>ev :tabedit $MYVIMRC<cr>
+"add simple highlight removal.
+nmap <leader><space> :nohlsearch<cr>
+"open nerd tree
+nmap <leader>nt :NERDTreeToggle<cr>
+" quick searching tags in buffer. * ctags is required.
+nmap <C-R> :CtrlPBufTag<cr>
+" ctrlp most recent files.
+nmap <C-e> :CtrlPMRUFiles<cr>
+
+"-------------plugins---------------
+"/ Ctrlp
+let g:ctrlp_working_path_mode='ra'
+let g:ctrlp_custom_ignore='\v(node_modules|vendor)$'
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=20
+"/ NERDTree
+let NERDTreeHijackNetrw=0
+"/ Greplace
+set grepprg=ag
+let g:grep_cmd_opts='--line-numbers --noheading'
+"/ syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_php_phpcs_args="--standard=psr2"
+let g:syntastic_javascript_checkers = ['eslint']
+"/ vim-jsx
+let g:jsx_ext_required=0
+
+
+"-------------search---------------
+set hlsearch
+set incsearch
+
+
+"------------split management---------
+set splitbelow
+set splitright
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
+
+" tips:
+" * Jump between edit position. ctrl-o and ctrl-i
+" * MARK m {key} to add mark, key in lowercase is only availabe in one file,
+"   key in uppercase is available across files. 
+"   then use '{key} go to the marked line, or `{key} go to the marked position.
