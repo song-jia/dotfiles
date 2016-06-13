@@ -19,11 +19,6 @@ set ruler
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-"set statusline+=%m
-"set statusline+=%c,
-"set statusline+=%l/%L
-"set statusline+=\ %P
-
 
 "--------------visuals-----------------------
 colorscheme material-theme
