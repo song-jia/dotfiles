@@ -14,16 +14,20 @@ set expandtab
 set softtabstop=4
 set shiftwidth=4
 set encoding=utf-8
+set ruler
 " display syntastic error in status line.
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-
 "--------------visuals-----------------------
 colorscheme material-theme
 set background=dark
-set guifont=Source\ Code\ Pro\ Medium\ 10
+if has('mac')
+    set guifont=Source\ Code\ Pro\ Medium:h14
+elseif has('unix')
+    set guifont=Source\ Code\ Pro\ Medium\ 10
+endif
 "hide left scorll bar
 set guioptions-=l
 set guioptions-=L
