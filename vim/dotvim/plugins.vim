@@ -23,6 +23,7 @@ Plugin 'posva/vim-vue'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
