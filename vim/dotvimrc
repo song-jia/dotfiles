@@ -16,13 +16,15 @@ set shiftwidth=4
 set encoding=utf-8
 set ruler
 " display syntastic error in status line.
-set statusline+=%#warningmsg#
+set statusline=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set statusline+=%=Line\ %l\:%L\ Column\ %c\ 
 
 "--------------visuals-----------------------
 colorscheme material-theme
 set background=dark
+set cursorline
 if has('mac')
     set guifont=Source\ Code\ Pro\ Medium:h14
 elseif has('unix')
@@ -74,7 +76,7 @@ nmap <C-e> :CtrlPMRUFiles<cr>
 "-------------plugins---------------
 "/ Ctrlp
 let g:ctrlp_working_path_mode='ra'
-let g:ctrlp_custom_ignore='\v(node_modules|vendor)$'
+let g:ctrlp_custom_ignore='\v(node_modules|vendor|blog)$'
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=20
 "/ NERDTree
