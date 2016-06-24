@@ -29,6 +29,8 @@ if has('mac')
     set guifont=Source\ Code\ Pro\ Medium:h14
 elseif has('unix')
     set guifont=Source\ Code\ Pro\ Medium\ 10
+elseif has('win32')
+    set guifont=Source\ Code\ Pro\ Medium:h10
 endif
 "hide left scorll bar
 set guioptions-=l
